@@ -1,10 +1,8 @@
+@use 'vars';
+@use 'colours';
+@use 'fonts';
 @use 'header';
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
-
-:root {
-  --background: rgba(0, 214, 170, .85);
-}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -13,6 +11,7 @@
 body {
   background-color: black;
   color: white;
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--primary-font);
   font-size: 2em;
 }
+

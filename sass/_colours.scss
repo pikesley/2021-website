@@ -1,0 +1,16 @@
+$teal: rgba(72, 183, 161, 0.85);
+$orange: rgba(250, 129, 0, 0.85);
+
+
+$grey: rgb(180, 180, 180);
+
+$background: $orange;
+$primary: white;
+$highlight: grey;
+
+:root {
+  --header-background-colour: #{$background};
+  --header-foreground-colour: #{$primary};
+  --header-link-colour: #{$primary};
+  --header-highlight-colour: #{$highlight};
+}

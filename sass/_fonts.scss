@@ -1,0 +1,7 @@
+$primary: "Work Sans";
+
+@import url('https://fonts.googleapis.com/css?family=#{$primary}');
+
+:root {
+  --primary-font: #{$primary};
+}
