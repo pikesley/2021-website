@@ -17,6 +17,8 @@
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "npm run sass -- --watch",
 
-    "start": "npm-run-all sass --parallel watch:*"
+    "start": "npm-run-all sass --parallel watch:*",
+
+    "publish": "eleventy build ; npm run sass"
   }
 }
