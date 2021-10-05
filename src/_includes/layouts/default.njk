@@ -8,7 +8,10 @@
   </head>
 
   <body>
-  <h1>{{ title }}</h1>
-  {{ content | safe }}
+    <header>
+    <h1 class="brand">pikesley.org</h1>
+    {% include "components/nav.njk" %}
+    </header>
   </body>
 </html>
+

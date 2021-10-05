@@ -1,0 +1,16 @@
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<nav>
+<ul>
+{%- for item in nav -%}
+
+<li>
+<a href="{{ item.url }}">{{ item.text }}</a>
+</li>
+
+{%- endfor -%}
+
+</ul>
+</nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
