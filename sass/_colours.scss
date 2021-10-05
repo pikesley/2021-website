@@ -1,5 +1,5 @@
-$teal: rgba(72, 183, 161, 0.85);
-$orange: rgba(250, 129, 0, 0.85);
+$teal: rgba(72, 183, 161, 0.9);
+$orange: rgba(250, 129, 0, 0.95);
 
 
 $grey: rgb(180, 180, 180);
@@ -13,4 +13,9 @@ $highlight: grey;
   --header-foreground-colour: #{$primary};
   --header-link-colour: #{$primary};
   --header-highlight-colour: #{$highlight};
+
+  --footer-background-colour: #{$background};
+  --footer-foreground-colour: #{$primary};
+  --footer-link-colour: #{$primary};
+  --footer-highlight-colour: #{$highlight};
 }

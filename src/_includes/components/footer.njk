@@ -1,0 +1,11 @@
+<footer>
+<ul>
+{%- for item in footer -%}
+<li>
+<a href="{{ item.url }}" title="{{ item.name }}" alt="{{ item.name }}">
+{% include "icons/" + item.icon + ".svg" %}
+</a>
+</li>
+{%- endfor -%}
+</ul>
+</footer>

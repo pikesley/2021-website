@@ -1,0 +1,40 @@
+@use "vars";
+@use "colours";
+
+footer {
+  background: var(--footer-background-colour);
+  text-align: center;
+
+  svg {
+    zoom: 0.7;
+    padding: 0;
+    margin: 0 1em 0 1em;
+  }
+
+  a {
+    path {
+      fill: var(--footer-link-colour);
+    }
+  }
+
+  a:hover {
+    path {
+      fill: var(--footer-highlight-colour);
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: vars.$breakpoint) {
+  footer {
+    svg {
+      zoom: 0.2;
+    }
+  }
+}
