@@ -5,6 +5,8 @@ $orange: rgba(250, 129, 0, 0.95);
 $grey: rgb(180, 180, 180);
 
 $background: $orange;
+$link: $orange;
+$hover: $grey;
 $primary: white;
 $highlight: grey;
 
@@ -18,4 +20,7 @@ $highlight: grey;
   --footer-foreground-colour: #{$primary};
   --footer-link-colour: #{$primary};
   --footer-highlight-colour: #{$highlight};
+
+  --link-colour: #{$link};
+  --hover-colour: #{$hover};
 }

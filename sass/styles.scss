@@ -2,6 +2,7 @@
 @use 'colours';
 @use 'fonts';
 @use 'header';
+@use 'main';
 @use 'footer';
 
 html {
@@ -20,10 +21,6 @@ body {
   min-height: 100%;
 }
 
-main {
-  margin: 1em;
-}
-
 footer {
-  margin-top: auto;
+  margin-top: auto; // force it to the bottom
 }

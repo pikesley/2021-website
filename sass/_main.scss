@@ -1,0 +1,23 @@
+@use "vars";
+@use "colours";
+
+main {
+  font-size: 2.5em;
+  margin: 1em;
+
+  a {
+    text-decoration: none;
+    color: var(--link-colour);
+  }
+
+  a:hover {
+    color: var(--hover-colour);
+  }
+}
+
+@media screen and (min-width: vars.$breakpoint) {
+  main {
+    font-size: 1em;
+    margin: 1em 4em 1em 4em;
+  }
+}
