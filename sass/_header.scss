@@ -1,0 +1,144 @@
+@use 'vars';
+@use 'colours';
+
+// https://www.youtube.com/watch?v=8QKOaTYvYUA
+
+header {
+  background: var(--header-background-colour);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  outline: 0 !important;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--header-background-colour);
+  width: 100%;
+  transform: scale(2, 0); // this makes them slide in from the left?
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  a {
+    color: var(--header-link-colour);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  a:hover {
+    color: var(--header-highlight-colour);
+  }
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+  a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+}
+
+@media screen and (min-width: vars.$breakpoint) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    // all: unset; /* this causes issues with Edge, since it's unsupported */
+
+    /* the following lines are not from the video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      margin-left: 3em;
+      margin-bottom: 0;
+    }
+
+    a {
+      opacity: 1;
+      position: relative;
+    }
+
+    a::before {
+      content: "";
+      display: block;
+      height: 5px;
+      background: var(--header-highlight-colour);
+      position: absolute;
+      top: -0.75em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+    }
+
+    a:hover::before {
+      transform: scale(1, 1);
+    }
+  }
+}
+
+path.hamburger-menu {
+  fill: var(--header-link-colour);
+}
