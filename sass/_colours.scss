@@ -1,35 +1,18 @@
-$teal: rgba(72, 183, 161, 0.9);
 $orange: rgba(250, 129, 0, 0.95);
 
-
-$grey: rgb(180, 180, 180);
-
-$background: $orange;
-$link: $orange;
-$hover: $grey;
-$primary: white;
-$highlight: grey;
-
-$light: rgb(229, 229, 229);
+$light: rgb(244, 244, 244);
 $dark: rgb(33, 33, 33);
 $accent: $orange;
 
+$link: $accent;
+$hover: darken($accent, 10%);
+
 :root {
-  --header-background-colour: #{$background};
-  --header-foreground-colour: #{$primary};
-  --header-link-colour: #{$primary};
-  --header-highlight-colour: #{$highlight};
+  --colour-link: #{$link};
+  --colour-hover: #{$hover};
 
-  --footer-background-colour: #{$background};
-  --footer-foreground-colour: #{$primary};
-  --footer-link-colour: #{$primary};
-  --footer-highlight-colour: #{$highlight};
+  --colour-light: #{$light};
+  --colour-dark: #{$dark};
 
-  --link-colour: #{$link};
-  --hover-colour: #{$hover};
-
-  --colour-light: $light;
-  --colour-dark: $dark;
-
-  --colour-accent: $accent;
+  --colour-accent: #{$accent};
 }
