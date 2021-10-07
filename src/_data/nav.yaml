@@ -1,11 +1,15 @@
-- text: Home
-  url: /
-
 - text: Projects
+  subhead: Things I have made
   url: /projects/
 
+- text: Talks
+  subhead: Things I have said
+  url: /talks/
+
 - text: Blog
+  subhead: Words I have written
   url: /blog/
 
 - text: CV
+  subhead: Work I have done
   url: /cv/

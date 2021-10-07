@@ -1,0 +1,28 @@
+@use "vars";
+
+a {
+  text-decoration: none;
+  color: var(--colour-link);
+}
+
+a:hover {
+  color: var(--colour-hover);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  height: 2px;
+  left: 0;
+  width: 100%;
+  background: var(--colour-link);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
