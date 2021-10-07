@@ -3,13 +3,14 @@
 a {
   text-decoration: none;
   color: var(--colour-link);
+  position: relative;
 }
 
 a:hover {
   color: var(--colour-hover);
 }
 
-a::after {
+a.fancy-link::after {
   content: "";
   position: absolute;
   bottom: -0.5rem;
@@ -22,7 +23,7 @@ a::after {
   transition: transform 250ms ease-in;
 }
 
-a:hover::after {
+a.fancy-link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }

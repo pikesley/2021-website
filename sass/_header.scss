@@ -3,8 +3,11 @@
 
 // https://www.youtube.com/watch?v=8QKOaTYvYUA
 
+.logo {
+  color: var(--colour-dark);
+}
+
 header {
-  // background: var(--header-background-colour);
   text-align: center;
   position: fixed;
   top: 0;
@@ -12,6 +15,8 @@ header {
   z-index: 999;
   width: 100%;
   font-size: 3em;
+  background: var(--colour-light);
+  opacity: 0.95;
 }
 
 .nav-toggle {
@@ -36,11 +41,17 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  background: var(--header-background-colour);
+  text-transform: lowercase;
+  background: var(--colour-light);
+  opacity: 0.95;
   width: 100%;
-  transform: scale(2, 0); // this makes them slide in from the left?
+  transform: scale(1, 0);
   transform-origin: top;
-  transition: transform 400ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+
+  a {
+    opacity: 0;
+  }
 
   ul {
     margin: 0;
@@ -52,26 +63,13 @@ nav {
     margin-bottom: 1em;
     margin-left: 1em;
   }
-
-  a {
-    color: var(--header-link-colour);
-    text-decoration: none;
-    font-size: 2rem;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 150ms ease-in-out;
-  }
-
-  a:hover {
-    color: var(--header-highlight-colour);
-  }
 }
 
 .nav-toggle:checked ~ nav {
   transform: scale(1, 1);
   a {
     opacity: 1;
-    transition: opacity 250ms ease-in-out 250ms;
+    transition: opacity 250ms ease-in-out 500ms;
   }
 }
 
@@ -121,26 +119,9 @@ nav {
       opacity: 1;
       position: relative;
     }
-
-    a::before {
-      content: "";
-      display: block;
-      height: 5px;
-      background: var(--header-highlight-colour);
-      position: absolute;
-      top: -0.75em;
-      left: 0;
-      right: 0;
-      transform: scale(0, 1);
-      transition: transform ease-in-out 250ms;
-    }
-
-    a:hover::before {
-      transform: scale(1, 1);
-    }
   }
 }
 
 path.hamburger-menu {
-  fill: var(--header-link-colour);
+  fill: var(--colour-link);
 }
