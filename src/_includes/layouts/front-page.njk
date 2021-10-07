@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>pikesley.org</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">pikesley.org</h1>
+    </header>
+    <main class="front-page">
+      {%- for item in nav -%}
+      <div class="front-page-card">
+        <h2 class="card-title">
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        </h2>
+
+        <h3 class="card-subhead">{{ item.subhead }}</h3>
+      </div>
+      {%- endfor -%}
+    </main>
+    {% include "components/footer.njk" %}
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      header_height = $("header").height();
+      $("main").css("padding-top", header_height);
+    });
+  </script>
+</html>

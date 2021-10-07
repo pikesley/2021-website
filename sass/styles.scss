@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--colour-light);
+  color: var(--colour-dark);
   font-family: var(--primary-font);
   margin: 0;
 

@@ -4,14 +4,14 @@
 // https://www.youtube.com/watch?v=8QKOaTYvYUA
 
 header {
-  background: var(--header-background-colour);
+  // background: var(--header-background-colour);
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
   width: 100%;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .nav-toggle {

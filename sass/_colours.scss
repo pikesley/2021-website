@@ -10,6 +10,10 @@ $hover: $grey;
 $primary: white;
 $highlight: grey;
 
+$light: rgb(229, 229, 229);
+$dark: rgb(33, 33, 33);
+$accent: $orange;
+
 :root {
   --header-background-colour: #{$background};
   --header-foreground-colour: #{$primary};
@@ -23,4 +27,9 @@ $highlight: grey;
 
   --link-colour: #{$link};
   --hover-colour: #{$hover};
+
+  --colour-light: $light;
+  --colour-dark: $dark;
+
+  --colour-accent: $accent;
 }
