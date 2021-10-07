@@ -1,15 +1,20 @@
+@use "sass:math";
 @use "vars";
 @use "colours";
 
 header.front-page {
   grid-template-columns: 1fr 1fr 1fr;
+  font-size: 3em;
 }
 
 main.front-page {
   text-transform: lowercase;
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(math.div(vars.$breakpoint, 2), 1fr)
+  );
 
   .front-page-card {
     padding: 1rem 3rem 1rem 3rem;
@@ -33,13 +38,9 @@ main.front-page {
     margin: 0;
     transition: opacity 300ms ease-in 300ms;
   }
-}
-
-@media screen and (max-width: vars.$breakpoint) {
-  main.front-page {
+  @media screen and (max-width: vars.$breakpoint) {
     .card-subhead {
       opacity: 1;
     }
   }
 }
-

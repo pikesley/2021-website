@@ -1,0 +1,27 @@
+@use "sass:math";
+@use "vars";
+
+ul#project-list {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(math.div(vars.$breakpoint, 2), 1fr)
+  );
+  list-style-type: none;
+
+  h2 {
+    display: inline;
+  }
+
+  li {
+    position: relative;
+  }
+
+  .tags {
+    display: none;
+    font-size: 0.5em;
+    position: absolute;
+    right: 0;
+  }
+}
