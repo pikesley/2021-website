@@ -16,16 +16,18 @@
     <header class="front-page">
       <h1 class="logo front-page">pikesley.org</h1>
     </header>
-    <main class="front-page">
-      {%- for item in nav -%}
-      <div class="front-page-card">
-        <h2 class="card-title">
-          <a href="{{ item.url }}" class="fancy-link">{{ item.text }}</a>
-        </h2>
+    <main>
+      <ul class="front-page">
+        {%- for item in nav -%}
+        <li class="front-page-card">
+          <h2 class="card-title">
+            <a href="{{ item.url }}" class="fancy-link">{{ item.text }}</a>
+          </h2>
 
-        <h3 class="card-subhead">{{ item.subhead }}</h3>
-      </div>
-      {%- endfor -%}
+          <h3 class="card-subhead">{{ item.subhead }}</h3>
+        </li>
+        {%- endfor -%}
+      </ul>
     </main>
     {% include "components/footer.njk" %}
   </body>
