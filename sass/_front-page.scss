@@ -7,7 +7,7 @@ header.front-page {
   font-size: 3em;
 }
 
-main.front-page {
+ul.front-page {
   text-transform: lowercase;
   display: grid;
   gap: 1em;
@@ -17,6 +17,7 @@ main.front-page {
   );
 
   .front-page-card {
+    list-style: none;
     padding: 1rem 3rem 1rem 3rem;
     text-align: left;
   }
@@ -38,6 +39,7 @@ main.front-page {
     margin: 0;
     transition: opacity 300ms ease-in 300ms;
   }
+
   @media screen and (max-width: vars.$breakpoint) {
     .card-subhead {
       opacity: 1;
